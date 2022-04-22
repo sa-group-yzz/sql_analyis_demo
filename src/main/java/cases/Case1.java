@@ -5,7 +5,7 @@ import cases.utils.Helper;
 
 import java.sql.*;
 
-public class Constant1 {
+public class Case1 {
     public static void main(String[] args) throws SQLException {
         Connection con = Helper.createDB();
         Helper.initDB(con);
