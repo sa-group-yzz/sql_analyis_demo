@@ -13,11 +13,13 @@ public class Case1 {
         ResultSet rs = stm.executeQuery("SELECT id,name,price from cars where price >=10000 limit 1");
         rs.next();
         int a;
+        int b = args.length;
+        CheckPoint.trigger(1, null, CheckPoint.LIVENESS_ANALYSIS);
         if(rs.getInt(3) > 100) {
             a = 1;
         } else {
-            a = 2;
+            a = b + 1;
         }
-        CheckPoint.trigger(1, a);
+        CheckPoint.trigger(1, a, CheckPoint.CONSTANT_ANALYSIS | CheckPoint.DEFINITION_ANALYSIS);
     }
 }
