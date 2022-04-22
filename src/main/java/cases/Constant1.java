@@ -1,6 +1,11 @@
+package cases;
+
+import cases.utils.CheckPoint;
+import cases.utils.Helper;
+
 import java.sql.*;
 
-public class Demo1 {
+public class Constant1 {
     public static void main(String[] args) throws SQLException {
         Connection con = Helper.createDB();
         Helper.initDB(con);
@@ -13,6 +18,6 @@ public class Demo1 {
         } else {
             a = 2;
         }
-        System.out.printf("a=%d\n", a);
+        CheckPoint.trigger(1, a);
     }
 }
