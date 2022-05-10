@@ -18,7 +18,7 @@ public class Case2 {
         int a = 5;
         int b = args.length;
         int c=1, d=a+b;
-        if(rs.getInt(3) > 100) {
+        if(rs.getInt(2) > 100) {
             a = 1;
             c = a + b;
         } else {
