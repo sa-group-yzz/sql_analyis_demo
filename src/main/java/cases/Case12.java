@@ -13,7 +13,7 @@ public class Case12 {
         Connection con = Helper.createDB();
         Helper.initDB(con);
         Statement stm = con.createStatement();
-        ResultSet rs = stm.executeQuery("SELECT id,name,price from cars where price >=10 and total <= 100 limit 1");
+        ResultSet rs = stm.executeQuery("SELECT id,name,price,total from cars where price >=10 and total <= 100 limit 1");
         rs.next();
         int a = 5;
         int b = args.length;
